@@ -1,0 +1,138 @@
+html {
+  font-size: 16px;
+  font-family: sans-serif, arial, serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+button {
+  background-color: rgba(0, 128, 0, 0.59);
+  color: #fff;
+  border: none;
+  padding: 5px 15px;
+  border: 1px solid #000;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+
+
+header {
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.customize-bar {
+  width: 100%;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.52);
+}
+
+.customize-bar h4 {
+  margin-bottom: 7px;
+}
+
+form .top-form-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+form .submit {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#Good, #Bad {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#Good {
+  color: rgba(30, 56, 202, 0.78);
+}
+
+#Bad {
+  color: rgb(185, 3, 3);
+}
+
+.likes-dislikes {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.likes, .dislikes {
+  width: 40%;
+  text-align: center;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+.likes {
+  border: 1px solid #000;
+}
+
+.dislikes {
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.likes h4, .dislikes h4 {
+  margin-bottom: 5px;
+}
+
+.side-profile h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile h4 {
+  margin-bottom: 7px;
+}
+
+.profile p {
+  margin-bottom: 20px;
+}
+
+.unicorns h3 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}

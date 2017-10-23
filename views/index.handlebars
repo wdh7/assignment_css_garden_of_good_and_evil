@@ -1,0 +1,124 @@
+<div class='wrapper'>
+  <header>
+    <h2 style='font-size: {{slider}}rem'>CSS: Good and Evil</h2>
+    <div class='greeting'>
+      Welcome to the <span id={{side}}>{{side}}</span> side!
+    </div>
+  </header>
+
+  <section class='customize-bar' style='background-color: {{colorSelection}}'>
+    <h4>Customize Bar:</h4>
+    <form action='/customize' method='POST'>
+      <div class='top-form-wrapper'>
+        <div class='radio-btns'>
+          <input type='radio' name='side' value='good'/>Good
+          <input type='radio' name='side' value='bad'/>Bad
+        </div>
+        <div class='fav-food'>
+          <label>Enter a favorite food:</label>
+          <input type='text' name='favFood' placeholder='Favorite Food' />
+        </div>
+        <div class='color-options'>
+          <select name='colorSelection'>
+            <option>Select color</option>
+            <option value='red'>Red</option>
+            <option value='blue'>Blue</option>
+            <option value='green'>Green</option>
+          </select>
+        </div>
+        <div class='intensity-slider'>
+          <label>Insanity:</label>
+          <input type='range' min='1' max='5' name='slider' value='1' list='tickmarks'/>
+          <datalist id='tickmarks'>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </datalist>
+        </div>
+      </div>
+      <div class='submit'>
+        <button type='submit'>Submit</button>
+      </div>
+    </form>
+  </section>
+
+  <section class='side-profile'>
+    <h3>The <span id={{side}}>{{side}}</span> Person Profile</h3>
+
+    {{#if isGood}}
+    <div class='likes-dislikes'>
+      <div class='likes'>
+        <h4>Likes:</h4>
+        <ul>
+        {{#each good.likes as |like|}}
+          <li>{{like}}</li>
+        {{/each}}
+          <li>{{favFood}}</li>
+        </ul>
+      </div>
+      <div class='dislikes'>
+        <h4>Dislikes:</h4>
+        <ul>
+        {{#each good.dislikes as |dislike|}}
+          <li>{{dislike}}</li>
+        {{/each}}
+        </ul>
+      </div>
+    </div>
+
+    <div class='profile'>
+      <h4>About:</h4>
+      <p>{{good.bio}}</p>
+      <h4>Resume</h4>
+      <ul>
+      {{#each good.resume as |duty|}}
+        <li>{{duty}}</li>
+      {{/each}}
+      </ul>
+    </div>
+
+
+
+
+    {{else}}
+    <div class='likes-dislikes'>
+      <div class='likes'>
+        <h4>Likes:</h4>
+        <ul>
+        {{#each evil.likes as |like|}}
+          <li>{{like}}</li>
+        {{/each}}
+          <li>{{favFood}}</li>
+        </ul>
+      </div>
+      <div class='dislikes'>
+        <h4>Dislikes:</h4>
+        <ul>
+        {{#each evil.dislikes as |dislike|}}
+          <li>{{dislike}}</li>
+        {{/each}}
+        </ul>
+      </div>
+    </div>
+    <div class='profile'>
+      <h4>About:</h4>
+      <p>{{evil.bio}}</p>
+      <h4>Resume</h4>
+      <ul>
+      {{#each evil.resume as |duty|}}
+        <li>{{duty}}</li>
+      {{/each}}
+      </ul>
+    </div>
+
+
+    {{/if}}
+
+  </section>
+
+  <div class='unicorns'>
+    <h3 style='font-size: {{slider}}rem'>Unicorn Friends Count: #{{slider}}</h3>
+  </div>
+</div>
